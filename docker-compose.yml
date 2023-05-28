@@ -23,6 +23,8 @@ services:
 
   selenium:
     image: selenium/standalone-chrome-debug:3.11.0-californium
+    volumes:
+      - ./tests:/home/selenium/tests
     environment:
       - VNC_NO_PASSWORD=1
       - SCREEN_WIDTH=1800
